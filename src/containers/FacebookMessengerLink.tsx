@@ -9,10 +9,7 @@ const FacebookMessengerLink: FC = () => {
   return (
     <div className="Facebook-messenger">
       <button onClick={handleFocusIframe}>Focus</button>
-      <ReactMessengerCustomerChat
-        pageId="771400903577002"
-        appId="810978546253814"
-      />
+      <ReactMessengerCustomerChat pageId="771400903577002" />
     </div>
   );
 };
