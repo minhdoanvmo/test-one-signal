@@ -20,7 +20,7 @@ const App: FC = () => {
         <div>
           {context?.notifications?.map((item) => (
             <p key={item.id} style={{ color: "white" }}>
-              {item.date.toString()} - {item.detail}
+              {item.date.toString()} - [{item.title}] {item.detail}
             </p>
           ))}
         </div>
