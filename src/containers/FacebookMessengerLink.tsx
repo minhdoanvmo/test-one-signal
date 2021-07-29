@@ -15,10 +15,9 @@ const FacebookMessengerLink: FC = () => {
     <div className="Facebook-messenger">
       <button onClick={handleFocusIframe}>Focus</button>
       <ReactMessengerCustomerChat
-        key={key}
         pageId="771400903577002"
         appId="810978546253814"
-        shouldShowDialog={true}
+        shouldShowDialog={!!key}
       />
     </div>
   );
