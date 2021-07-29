@@ -3,7 +3,8 @@ import ReactMessengerCustomerChat from "react-messenger-customer-chat";
 
 const FacebookMessengerLink: FC = () => {
   const handleFocusIframe = useCallback(() => {
-    const element = document.getElementsByName("Messenger-customer-chat")[0];
+    const element = document.getElementsByName("fb_customer_chat_icon")[0];
+    console.log(element);
     element?.focus();
   }, []);
 
@@ -13,7 +14,6 @@ const FacebookMessengerLink: FC = () => {
       <ReactMessengerCustomerChat
         pageId="771400903577002"
         appId="810978546253814"
-        class="Messenger-customer-chat"
       />
     </div>
   );
