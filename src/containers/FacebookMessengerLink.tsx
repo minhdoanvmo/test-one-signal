@@ -3,7 +3,7 @@ import ReactMessengerCustomerChat from "react-messenger-customer-chat";
 
 const FacebookMessengerLink: FC = () => {
   const handleFocusIframe = useCallback(() => {
-    (window as any).FB.CustomerChat.showDialog();
+    (window as any)?.FB?.CustomerChat?.showDialog?.();
   }, []);
 
   return (
