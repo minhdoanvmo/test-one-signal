@@ -8,7 +8,7 @@ const FacebookMessengerLink: FC = () => {
   const [key, setKey] = useState<string>(initial);
 
   const handleFocusIframe = useCallback(() => {
-    setKey(v4());
+    (window as any).FB.CustomerChat.showDialog();
   }, []);
 
   return (
@@ -17,7 +17,6 @@ const FacebookMessengerLink: FC = () => {
       <ReactMessengerCustomerChat
         pageId="771400903577002"
         appId="810978546253814"
-        shouldShowDialog={!!key}
       />
     </div>
   );
