@@ -1,10 +1,13 @@
-import React, { useContext } from "react";
+import React, { FC, useContext } from "react";
+
+import logo from "./logo.svg";
 
 import { NotificationContext } from "./contexts/NotificationContext";
-import logo from "./logo.svg";
+import FacebookMessengerLink from "./containers/FacebookMessengerLink";
+
 import "./App.css";
 
-function App() {
+const App: FC = () => {
   const context = useContext(NotificationContext);
 
   return (
@@ -22,8 +25,9 @@ function App() {
           ))}
         </div>
       </header>
+      <FacebookMessengerLink />
     </div>
   );
-}
+};
 
 export default App;
