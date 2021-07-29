@@ -52,9 +52,9 @@ const NotificationProvider: FC = ({ children }) => {
       OneSignal.push(() => {
         if (OneSignal.init) {
           OneSignal.init({
-            appId: "5edb4b65-17f7-4639-be62-8e4991c28382",
+            appId: "105fb738-a5db-4037-a6b7-07fcc7cbdfb8",
             safari_web_id:
-              "web.onesignal.auto.44fa898b-ecac-43e4-a4f9-b7817452e5d5",
+              "web.onesignal.auto.3437296f-1581-4c9c-99a7-ef947df2b18c",
             allowLocalhostAsSecureOrigin: false,
             autoResubscribe: true,
           }).finally(() => {
