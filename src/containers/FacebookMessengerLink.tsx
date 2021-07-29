@@ -2,23 +2,23 @@ import React, { FC, useState, useCallback } from "react";
 import { v4 } from "uuid";
 import ReactMessengerCustomerChat from "react-messenger-customer-chat";
 
+const initial = v4();
+
 const FacebookMessengerLink: FC = () => {
-  const [show, setShow] = useState<boolean>(false);
+  const [key, setKey] = useState<string>(initial);
 
   const handleFocusIframe = useCallback(() => {
-    setShow(true);
+    setKey(v4());
   }, []);
 
   return (
     <div className="Facebook-messenger">
       <button onClick={handleFocusIframe}>Focus</button>
       <ReactMessengerCustomerChat
-        key={v4()}
+        key={key}
         pageId="771400903577002"
         appId="810978546253814"
-        shouldShowDialog={show}
-        onCustomerChatDialogShow={() => setShow(true)}
-        onCustomerChatDialogHide={() => setShow(false)}
+        shouldShowDialog={true}
       />
     </div>
   );
